@@ -25,7 +25,7 @@ export default function Films() {
     getFilms(page + 1);
   }
   function getFilms(page) {
-    if (!sort) setSort("rating.desc");
+    if (!sort) {setSort("rating.desc");}
     getFilteredMovies(
       selectedGenre,
       page,
@@ -56,6 +56,21 @@ export default function Films() {
     { id: "28", value: "Action" },
     { id: "12", value: "Adventure" },
     { id: "16", value: "Animatiion" },
+    { id: "35", value: "Comedy" },
+    { id: "80", value: "Crime" },
+    { id: "99", value: "Documentary" },
+    { id: "18", value: "Drama" },
+    { id: "10751", value: "Family" },
+    { id: "14", value: "Fantasy" },
+    { id: "36", value: "History" },
+    { id: "27", value: "Horror" },
+    { id: "10402", value: "Music" },
+    { id: "9648", value: "Mystery" },
+    { id: "10749", value: "Romance" },
+    { id: "878", value: "Science Fiction" },
+    { id: "53", value: "Thriller" },
+    { id: "10752", value: "War" },
+    { id: "37", value: "Western" },
   ];
   const [selectedGenre, setSelectedGenre] = useState([]);
   const [page, setPage] = useState(1);

@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Films from "../Films/Films";
-import footer_logo from "../../images/footer__logo.png";
 import "./FAQMenu.css";
 export default function FAQMenu() {
   return (

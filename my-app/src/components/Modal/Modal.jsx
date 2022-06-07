@@ -3,7 +3,6 @@ import "./Modal.css";
 import { RiCloseLine } from "react-icons/ri";
 import ModalCardFilm from "../ModalCardFilm/ModalCardFilm";
 const Modal = (props) => {
-  console.log(props);
   return (
     <>
       <div

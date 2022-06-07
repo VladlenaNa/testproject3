@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Genre.css";
-let genres = [];
 export default function Genre(props) {
+  const [genres, setGenres] = useState([]);
   const [isClicked, setIsClicked] = useState(false);
   function handleSubmit(e) {
     e.preventDefault();
@@ -12,9 +12,9 @@ export default function Genre(props) {
     } else {
       e.target.style.backgroundColor = "#01b4e4";
       setIsClicked(true);
-      genres.push(e.target.id);
+      setGenres(genres.push(e.target.id))
+      // genres.push(e.target.id);
     }
-    console.log(genres);
     props.setSelectedGenre(genres);
   }
   return (

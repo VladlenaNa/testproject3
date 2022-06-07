@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../../images/logo.png";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import tmdbIcon from "../../images/sheldon.png";
@@ -105,7 +104,7 @@ export default function TMDB() {
           </div>
           <div className="staat_img">
             <p>
-              <img src={tmdbIcon} />
+              <img src={tmdbIcon} alt="" />
             </p>
           </div>
         </div>

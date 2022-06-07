@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../Header/Header";
 import CardFilm from "../CardFilm/CardFilm";
 import "./PopularFilmsSection.css";
 export default function PopularFilmsSection(props) {

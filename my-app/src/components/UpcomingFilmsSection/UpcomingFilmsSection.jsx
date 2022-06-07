@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../Header/Header";
 import CardFilm from "../CardFilm/CardFilm";
 import "./UpcomingFilmsSection.css";
 export default function UpcomingFilmsSection(props) {

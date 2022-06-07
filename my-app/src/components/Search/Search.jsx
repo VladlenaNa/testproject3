@@ -1,16 +1,11 @@
-import React from "react";
-import Header from "../Header/Header";
+import React, {useState} from "react";
 import "./Search.css";
-import { useState } from "react";
 import { searchMovie } from "../../App";
-import { useEffect } from "react";
-import { ReactDOM } from "react";
 import Modal from "../Modal/Modal";
 import searchIcon from "../../images/iconSearch.png";
 export default function Search() {
   const [keyword, setKeyWord] = useState("");
   const [foundFilms, setFoundFilms] = useState([]);
-  const [isFound, setIsFound] = useState(false);
   const [isModal, setModal] = React.useState(false);
   function get_title(event) {
     event.preventDefault();
@@ -23,7 +18,6 @@ export default function Search() {
       setModal(true);
     });
   }
-  console.log(isModal);
   return (
     <div className="search_section">
       <div className="search_content">
@@ -43,6 +37,7 @@ export default function Search() {
             onClick={handleSubmit}
             className="search_button"
             src={searchIcon}
+            alt=""
           ></img>
         </form>
       </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import footer_logo from "../../images/footer__logo.png";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import "./Contact.css";

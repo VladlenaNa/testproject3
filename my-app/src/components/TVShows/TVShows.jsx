@@ -4,10 +4,8 @@ import Footer from "../Footer/Footer";
 import "./TVShows.css";
 import Genre from "../Genre/Genre";
 import {
-  getFilteredMovies,
   getFilteredTVShows,
   getPopularTVShows,
-  getUpcomingMovies,
 } from "../../App";
 import CardFilm from "../CardFilm/CardFilm";
 export default function TvShow() {
@@ -30,7 +28,6 @@ export default function TvShow() {
     getFilms(page + 1);
   }
   function getFilms(page) {
-    console.log(page);
     if (!sort) setSort("rating.desc");
     getFilteredTVShows(
       selectedGenre,
@@ -54,14 +51,22 @@ export default function TvShow() {
       "&primary_release_date.lte=" + dataLte
     ).then((movies) => {
       setFilteredFilms(movies);
-      console.log(movies);
     });
     setPage(1);
   }
   let genres = [
-    { id: "28", value: "Action" },
-    { id: "12", value: "Adventure" },
-    { id: "16", value: "Animatiion" },
+    { id: "10759", value: "Action&Adventure" },
+    { id: "16", value: "Animation" },
+    { id: "35", value: "Comedy" },
+    { id: "99", value: "Documentary" },
+    { id: "18", value: "Drama" },
+    { id: "10751", value: "Family" },
+    { id: "10762", value: "Kids" },
+    { id: "10763", value: "News" },
+    { id: "10764", value: "Reality" },
+    { id: "10767", value: "Talk" },
+    { id: "10768", value: "War&Politics" },
+    { id: "37", value: "Western" },
   ];
   const [selectedGenre, setSelectedGenre] = useState([]);
   const [page, setPage] = useState(1);
