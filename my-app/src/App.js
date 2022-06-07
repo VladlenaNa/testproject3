@@ -8,6 +8,9 @@ import TMDB from './components/FooterNavigation/TMDB';
 import Contact from './components/FooterNavigation/Contact';
 import General from './components/FAQMenu/General';
 import TVShows from './components/TVShows/TVShows';
+import Guidelines from './components/FooterNavigation/Guidelines';
+import Terms from './components/FooterNavigation/Terms';
+import Api from './components/FooterNavigation/Api';
 
 export async function getPopularMovies() {
 	const apiKey = "b21ca73525eac0f28ecf0f8ae09a9306"
@@ -95,6 +98,9 @@ function App() {
       <Route path='/Contact' element={<Contact/>}/>
       <Route path='/General' element={<General/>}/>
       <Route path='/Main' element={<Main/>}/>
+      <Route path='/Guidelines' element={<Guidelines/>}/>
+      <Route path='/Terms' element={<Terms/>}/>
+      <Route path='/Api' element={<Api/>}/>
     </Routes>
   );
 }

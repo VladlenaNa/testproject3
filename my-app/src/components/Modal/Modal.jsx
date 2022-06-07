@@ -3,10 +3,15 @@ import "./Modal.css";
 import { RiCloseLine } from "react-icons/ri";
 import ModalCardFilm from "../ModalCardFilm/ModalCardFilm";
 const Modal = (props) => {
-    console.log(props)
+  console.log(props);
   return (
     <>
-      <div className="darkBG" onClick={() => {props.setModal(false)}} />
+      <div
+        className="darkBG"
+        onClick={() => {
+          props.setModal(false);
+        }}
+      />
       <div className="centered">
         <div className="modal">
           <div className="modalHeader">
@@ -16,13 +21,12 @@ const Modal = (props) => {
             <RiCloseLine style={{ marginBottom: "-3px" }} />
           </button>
           <div className="modalContent">
-                {props.foundFilms.map((movie)=>{
-                    return <ModalCardFilm key={movie.id} movie={movie}/>
-                })}
+            {props.foundFilms.map((movie) => {
+              return <ModalCardFilm key={movie.id} movie={movie} />;
+            })}
           </div>
           <div className="modalActions">
-            <div className="actionsContainer">
-            </div>
+            <div className="actionsContainer"></div>
           </div>
         </div>
       </div>
